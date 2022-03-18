@@ -55,7 +55,7 @@ class App extends React.Component {
         dueDate: data.dueDate.value ? data.dueDate.value : today,
         priority: this.state.changePriority,
       });
-      console.log("them: ", inputData);
+
       const config = {
         method: "post",
         url: "http://localhost:9000/api/tasks/",
@@ -85,7 +85,7 @@ class App extends React.Component {
 
     axios(config)
       .then((response) => {
-        console.log("response", response);
+        //console.log("response", response);
         alert("Deleted successfully.");
         setTimeout(this.loadTasks(), 2000);
       })
@@ -348,26 +348,26 @@ class App extends React.Component {
                     </td>
                     <td className="displaySubItem">
                       {this.state.id ? (
-                        <div className="actionBtn">
-                          <button
-                            className="btnDetail"
+                        <>
+                          <div
+                            className="btnDetailFrm"
                             onClick={this.handleDetail.bind(
                               this,
                               this.state.id
                             )}
                           >
                             Detail
-                          </button>
-                          <button
-                            className="btnRemove"
+                          </div>
+                          <div
+                            className="btnRemoveFrm"
                             onClick={this.handleRemove.bind(
                               this,
                               this.state.id
                             )}
                           >
                             Remove
-                          </button>
-                        </div>
+                          </div>
+                        </>
                       ) : null}
                     </td>
                   </tr>
@@ -489,20 +489,20 @@ class App extends React.Component {
                   })
                 : null}
               {this.state.isShowBulkAction === true ? (
-              <div className="bulkAction">
-                <p>
-                  <label className="titleName">Bulk Action:</label>
-                  <button className="btnDone" onClick={this.handleDetail}>
-                    Done
-                  </button>
-                  <button
-                    className="btnRemove"
-                    onClick={this.handleCheckedCheckBox}
-                  >
-                    Remove
-                  </button>
-                </p>
-              </div>
+                <div className="bulkAction">
+                  <p>
+                    <label className="titleName">Bulk Action:</label>
+                    <button className="btnDone" onClick={this.handleDetail}>
+                      Done
+                    </button>
+                    <button
+                      className="btnRemove"
+                      onClick={this.handleCheckedCheckBox}
+                    >
+                      Remove
+                    </button>
+                  </p>
+                </div>
               ) : null}
             </div>
           </article>

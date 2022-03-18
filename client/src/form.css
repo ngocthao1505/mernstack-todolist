@@ -43,9 +43,9 @@ table {
   max-width: 470px;
 }
 
-.actionBtn {
+/* .actionBtn {
   max-width: 345px;
-}
+} */
 
 .displayItem tr td:last-child {
   text-align: right;
@@ -163,6 +163,32 @@ th {
 .titleUpdate {
   text-align: center;
   font-weight: bold;
+}
+
+.btnDetailFrm {
+  background-color: #00bcd4;
+  width: 82px;
+  height: 26px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  display: inline;
+  font-size: 13px;
+  margin-left: 50px;
+}
+
+.btnRemoveFrm {
+  background-color: #d9534f;
+  width: 82px;
+  height: 26px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  display: inline;
+  font-size: 13px;
+  margin-left: 15px;
 }
 
 .btnRemove {
