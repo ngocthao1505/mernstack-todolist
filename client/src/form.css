@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 1000px; /* only for demonstration, should be removed */
+  padding: 20px;
+  background: #ccc;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  height: 1000px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  /* border: 1px solid black; */
+  margin-left: 25px;
+  max-width: 470px;
+}
+
+.actionBtn {
+  max-width: 345px;
+}
+
+.displayItem tr td:last-child {
+  text-align: right;
+}
+
+.displayItem {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-left: 52px;
+  min-width: 363px;
+}
+
+.rightSide .displayDetailItem {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-left: 52px;
+}
+
+.subItemRow {
+  border: 1px solid black;
+}
+
+.titleName {
+  font-size: 12px;
+  margin-left: 25px;
+}
+
+.checkBox {
+  margin-right: 10px;
+}
+
+#search {
+  margin-left: 50px;
+}
+
+.prioritySelect {
+  width: 160px;
+}
+
+td,
+th {
+  padding: 8px;
+  text-align: "center";
+}
+
+.titleTask {
+  width: 345px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+}
+
+.titleTaskRight {
+  height: 30px;
+  width: 367px;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  margin-left: -20px;
+}
+
+.btnAdd {
+  background-color: #4daf50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 345px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.btnUpdate {
+  background-color: #4daf50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 345px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btnDone {
+  background-color: #2196f3; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 82px;
+  margin-left: 182px;
+}
+
+.btnDetail {
+  background-color: #00bcd4; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 15px;
+  width: 82px;
+}
+
+.titleUpdate {
+  text-align: center;
+  font-weight: bold;
+}
+
+.btnRemove {
+  background-color: #d9534f; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+.leftSide {
+  margin-left: 150px;
+  width: 35%;
+  height: 720px;
+  float: left;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.rightSide {
+  width: 41%;
+  height: 720px;
+  float: right;
+  border: 1px solid black;
+  margin-right: 134px;
+}
+
+.bulkAction {
+  border: 1px solid black;
+  background-color: #e0e0e0;
+  height: 55px;
+  margin-bottom: 1px;
+}
+
+.bulkAction .btnRemove {
+  margin-right: 20px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*vertical display and on phone */
+@media (max-width: 320px) {
+  /*  */
+}
+
+/*horizontal display and on phone */
+@media (max-width: 480px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*horizontal display and on tablet */
+@media (max-width: 800px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*horizontal display and on tablet */
+@media (max-width: 768px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*horizontal display and on tablet */
+@media (max-width: 1233px) {
+  .leftSide {
+    width: 420px;
+    margin-left: 0px;
+    border-right: 1px solid black;
+  }
+  .rightSide {
+    float: left;
+    width: 470px;
+  }
+}
+
+@media (min-width: 1233px) {
+  .leftSide {
+    width: 420px;
+    margin-left: 0px;
+    border-right: 1px solid black;
+  }
+  .rightSide {
+    width: 470px;
+    float: left;
+  }
+}
