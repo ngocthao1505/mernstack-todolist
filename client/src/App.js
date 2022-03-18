@@ -488,7 +488,7 @@ class App extends React.Component {
                     );
                   })
                 : null}
-              {/* {this.state.isShowBulkAction === true ? ( */}
+              {this.state.isShowBulkAction === true ? (
               <div className="bulkAction">
                 <p>
                   <label className="titleName">Bulk Action:</label>
@@ -503,7 +503,7 @@ class App extends React.Component {
                   </button>
                 </p>
               </div>
-              {/* ) : null} */}
+              ) : null}
             </div>
           </article>
         </section>
